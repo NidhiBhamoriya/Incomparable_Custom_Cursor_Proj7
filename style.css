@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html, body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cursor{
+    height: 18px;
+    width: 18px;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;                /*  <---------👂👂cursor ko must dege position absolute */
+    mix-blend-mode: difference;
+    transition: all linear 0.2s;      /* linear or else same hi km kr rhe h*/
+}
+h1{
+    font-size: 10vw;
+    font-weight: 900;
+    color: white;                    
+                    /* 👂👂👂 ak bar niche ki sari line hta ke go live krna */
+    background-image: url(./bcg_img.webp);
+    background-size: cover;
+    background-position: center;
+
+    background-clip: text;                     /*1 jadui property added*/
+    -webkit-background-clip: text;             /*2 jadui property added*/
+    color: transparent;                        /*3 jadui property added*/   
+                                  /* <--- h1 ka color transparent ho jaye black nhi rkhna chahte*/
+}
